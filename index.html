@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Temperature Unit Toggle -->
+        <button class="temp-toggle" id="tempToggle">°C / °F</button>
+        
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-container">
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Dark Mode</span>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="app-title">Weather App</h1>
+            
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="locationInput" placeholder="Enter city name..." class="search-input">
+                    <button id="searchBtn" class="search-btn">
+                        <span>Go</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Weather Display -->
+            <div class="weather-display" id="weatherDisplay">
+                <div class="weather-card">
+                    <div class="location-info">
+                        <h2 class="location-name" id="locationName">Enter a location to get weather</h2>
+                        <p class="current-date" id="currentDate"></p>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="temperature-section">
+                            <span class="temperature" id="temperature">--°</span>
+                            <div class="weather-icon" id="weatherIcon">
+                                <span>🌤️</span>
+                            </div>
+                        </div>
+                        
+                        <div class="weather-description">
+                            <p class="description" id="description">Weather description</p>
+                            <p class="feels-like" id="feelsLike">Feels like --°</p>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="windSpeed">-- km/h</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Pressure</span>
+                            <span class="detail-value" id="pressure">-- hPa</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Visibility</span>
+                            <span class="detail-value" id="visibility">-- km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/mujeeeeeeeeeb" target="_blank" rel="noopener noreferrer">Mujeeb ul Habib</a></p>
+        </footer>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-content">
+                <h3>Location Not Found</h3>
+                <p>Please try a different location</p>
+                <button class="modal-btn" id="modalCloseBtn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
