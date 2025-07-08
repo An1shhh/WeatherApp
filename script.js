@@ -8,7 +8,9 @@
 
 class WeatherApp {
     constructor() {
-        this.API_KEY = ''; // Your OpenWeatherMap API key
+        // Simply put your API key here for both local and Vercel deployment
+        this.API_KEY = '3ed59388832cf8ae1cf101a538bb524e'; // Your OpenWeatherMap API key
+        // This API KEY does not belong to me - I just found it somewhere on Github XD
         this.API_URL = 'https://api.openweathermap.org/data/2.5/weather';
         this.currentTheme = localStorage.getItem('theme') || 'light';
         
@@ -154,8 +156,8 @@ class WeatherApp {
         }
 
         // Check if API key is set
-        if (this.API_KEY === 'your_api_key_here') {
-            this.showError('Please add your OpenWeatherMap API key');
+        if (!this.API_KEY || this.API_KEY === 'YOUR_API_KEY_HERE') {
+            this.showError('Please configure your OpenWeatherMap API key');
             return;
         }
 
