@@ -1,8 +1,8 @@
 /**
  * Weather App
  * A modern weather application with light/dark mode toggle
- * Author: Mujeeb ul Habib
- * GitHub: https://github.com/mujeeeeeeeeeb
+ * Author: Anish Khajuria
+ * GitHub: hhttps://github.com/An1shhh
  * Features: Location-based weather search, temperature unit toggle, responsive design
  */
 
